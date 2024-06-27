@@ -21,11 +21,11 @@ export default function Form({dispatch} : FormProps) {
 
   const handleChange = (e: ChangeEvent<HTMLSelectElement> | ChangeEvent<HTMLInputElement>) => {
     const isNumberField = ['category', 'calories'].includes(e.target.id)
-    const value = isNumberField ? parseInt(e.target.value) : e.target.value
+    
 
     setActivity({
       ...activity,
-      [e.target.id]: value
+      [e.target.id]: isNumberField ? +e.target.value : e.target.value
     })
   }
 
