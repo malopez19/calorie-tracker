@@ -2,7 +2,7 @@ import { Activity } from "../types";
 
 export type ActivityActions = {type: 'SAVE_ACTIVITY', payload: { newActivity : Activity}} | {type: 'SET_ACTIVEID', payload: { id : Activity['id']}}
 
-type ActivityState={
+export type ActivityState={
   activities: Activity[],
   activeId: Activity['id']
 }
